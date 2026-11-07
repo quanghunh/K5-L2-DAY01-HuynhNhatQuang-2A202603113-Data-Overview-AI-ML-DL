@@ -136,7 +136,7 @@ Nguồn: day1_lab_outputs/detection_predictions.json và visuals/detection_predi
 
     Nếu viết thành quy tắc trong guideline: vật bị cắt ở mép ảnh thì chỉ vẽ box quanh phần nhìn thấy, không đoán và vẽ thêm phần ngoài ảnh.
    
-    Đưa lên hỏi Lab Coach (escalation): trường hợp chỉ thấy một bàn tay thì có tính là person hay không. Mình chưa biết guideline cho phép lấy bao nhiêu phần vật thể thì được gán nhãn. Nếu mình tự quyết thì khác gì tự bịa quy tắc, và mỗi annotator có thể làm một kiểu.
+    Đưa lên hỏi Lab Coach (escalation): trường hợp chỉ thấy một bàn tay thì có tính là person hay không. Vì chưa biết guideline cho phép lấy bao nhiêu phần vật thể thì được gán nhãn. Nếu tự quyết thì khác gì tự bịa quy tắc, và mỗi annotator có thể làm một kiểu.
 
 Vì thế tôi chọn escalation cho ca cụ thể này, rồi sau khi có câu trả lời mới viết thêm vào guideline.
 
@@ -189,7 +189,7 @@ Chọn lại người đứng giữa ảnh (record person 0.90) để dễ so v�
 
    Theo record, oven có bbox_xyxy=[0.25, 188.95, 194.35, 294.62] và dining table có bbox_xyxy=[0.97, 234.74, 345.86, 423.87], hai box này cũng chồng nhau ở khoảng y = 235–295. Chỗ này khó vì nhiều vật chạm nhau và tối, khó thấy đường biên.
 
-    Tôi chọn dùng guideline để xử lý chỗ này. Lý do là hai vật chạm nhau là chuyện gặp rất nhiều ở các ảnh khác, nên viết một quy tắc chung (mỗi mask dừng ở đường tiếp xúc, không chồng nhau, như ở câu 4) là đủ để annotator làm theo. Mình chỉ escalation nếu gặp ca mà quy tắc này vẫn không trả lời được, ví dụ vật bị che gần hết nên không biết biên ở đâu thì không tự đoán.
+    Tôi chọn dùng guideline để xử lý chỗ này. Lý do là hai vật chạm nhau là chuyện gặp rất nhiều ở các ảnh khác, nên viết một quy tắc chung (mỗi mask dừng ở đường tiếp xúc, không chồng nhau) là đủ để annotator làm theo. Và chỉ escalation nếu gặp ca mà quy tắc này vẫn không trả lời được, ví dụ vật bị che gần hết nên không biết biên ở đâu thì không tự đoán.
 
 ## 4. Vòng đời và kiểm tra chất lượng
 
